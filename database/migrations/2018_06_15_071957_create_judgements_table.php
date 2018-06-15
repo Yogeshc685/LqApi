@@ -15,6 +15,18 @@ class CreateJudgementsTable extends Migration
     {
         Schema::create('judgements', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('Petitioner');
+            $table->string('Responder');
+            $table->integer('CaseYear');
+            $table->string('DateOfJudgement');
+              $table->integer('CaseNo');
+              $table->string('Citation');
+              $table->integer('CaseId');
+              $table->integer('CourtId');
+              $table->text('Judgement');
+              $table->text('ArgumentsOfPetitioner');
+              $table->text('ArgumentsOfResponder');
+              $table->text('Reasoning');
             $table->timestamps();
         });
     }
